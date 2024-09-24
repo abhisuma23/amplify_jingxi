@@ -14,4 +14,4 @@ const amplifyBackendName = backend.auth.resources.userPool.node.tryGetContext(
 );
 
 const sayHelloLambda = backend.sayHello.resources.lambda as aws_lambda.Function
-sayHelloLambda.addEnvironment("SQS_QUEUE_URL", amplifyBackendName);
+sayHelloLambda.addEnvironment("ENV", amplifyBackendName);
